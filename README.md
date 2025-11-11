@@ -1,8 +1,9 @@
 # CUDA Path Tracer
+Physically-based path tracer in CUDA.
 
-**University of Pennsylvania, CIS 5650: GPU Programming and Architecture, Project 3**
-
-**Author:** Lu Men ([LinkedIn](https://www.linkedin.com/in/lu-m-673425323/))
+**Author:** Lu M.
+- [LinkedIn](https://www.linkedin.com/in/lu-m-673425323/)
+- [Personal site](lu-m-dev.github.io)
 
 **Tested System:**
  - Windows 11 Home
@@ -13,7 +14,7 @@
 
 This project implements a GPU path tracer written in CUDA that renders images. The implementation focuses on both visual correctness and GPU performance. The tracer supports multiple sampling strategies and a thin-lens camera model for depth-of-field.
 
-<img src="img/cover.png" alt="Base render" width=80%/>
+<img src="img/demo.gif" alt="Base render" width=80%/>
 
 ## Features
 
@@ -112,11 +113,11 @@ This is what happens when inner/outer surface determination is flipped during re
 
 ## References and Acknowledgements
 
-This project adapted methods and pseudocode from these well-known references:
+This project adapted methods and pseudocode from these references:
 
 - [_Physically Based Rendering_](https://pbr-book.org/4ed/contents)
 - [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html)
 - [_The path to path-traced movies_](https://cs.dartmouth.edu/~wjarosz/publications/christensen16path.html)
-- [_CIS 5650 Fall 2025_](https://github.com/CIS5650-Fall-2025)
+- [_University of Pennsylvania CIS 5650_](https://github.com/CIS5650-Fall-2025)
 
-Acknowledgements: Many thanks to the authors and open-source materials. Code structure and many algorithmic choices were influenced by course materials and the references above.
+Acknowledgements: Many thanks to the authors and open-source materials. Code structure and many algorithmic choices were influenced by the references above.
