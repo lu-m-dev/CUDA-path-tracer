@@ -10,11 +10,37 @@ Physically-based path tracer in CUDA.
  - AMD Ryzen 7 5800HS @ 3.20GHz, 16GB RAM
  - NVIDIA GeForce RTX 3060 Laptop GPU 6GB (Compute Capability 8.6)
 
+---
+
 ## Abstract
 
 This project implements a GPU path tracer written in CUDA that renders images. The implementation focuses on both visual correctness and GPU performance. The tracer supports multiple sampling strategies and a thin-lens camera model for depth-of-field.
 
 <img src="img/demo.gif" alt="Base render" width=80%/>
+
+---
+
+## Build instructions
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/lu-m-dev/CUDA-path-tracer.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd CUDA-path-tracer
+   ```
+3. Build with CMake:
+   ```sh
+   cmake -B build -S . -G "Visual Studio 17 2022"
+   ```
+4. Open the solution in Visual Studio:
+   ```sh
+   cd build
+   start ./cis565_path_tracer.sln
+   ```
+
+---
 
 ## Features
 
@@ -105,11 +131,15 @@ Discussions:
 - Stream compaction reduces traced rays in later bounces, improving throughput; however, the relative benefit depends on scene complexity and depth distribution.
 - Direct lighting increases light directionality visuals but requires additional computation; use it when higher fidelity is required.
 
+---
+
 ## Bloopers
 
 <img src="img/blooper.png" alt="Blooper" width=80%/>
 
 This is what happens when inner/outer surface determination is flipped during refraction handling. Inner surfaces are treated as outer surfaces, and vice versa. This only impacted the dielectric material object (in the figure above, the rightmost sphere and cube). Those objects are partially specular and partially "diffusive" to darkness. Thus, an interesting and complex pattern is created when external and internal interactions are flipped.
+
+---
 
 ## References and Acknowledgements
 
